@@ -1,0 +1,6 @@
+env/
+__pycache__
+*.env
+*.env.*
+env.*
+smart-portfolio-401206-5657d2c792f3.json
