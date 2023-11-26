@@ -1,0 +1,278 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: rgb(3,0,31);
+  /* background-image: linear-gradient(to right bottom,  rgb(154, 149, 230),rgb(3,0,31)); */
+  color: white;
+  font-family: 'Poppins' , 'sans-serif';
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+
+}
+
+.sideBar {
+  flex : 3;
+  border-right: 1px solid rgb(100,100,100);
+  display: block;
+}
+
+.main {
+  flex : 9;
+  min-height: calc(100vh - 14rem);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 6rem 10rem;
+}
+
+.logo {
+  margin-right: 1rem;
+}
+
+.chat-history {
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.upperSide {
+  padding: 2.5rem;
+  border-bottom: 1px solid rgb(100,100,100);
+  display: flex;
+  flex-direction: column;
+  /* height: 70%; */
+}
+.uppersideTop {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 2.5rem; */
+}
+
+.cancel-icon {
+  display: none;
+}
+
+.middleSide img {
+  margin: 1rem;
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.middleSide {
+  display: flex;
+  align-items: center;
+}
+.name {
+  font-size: medium;
+}
+
+.query {
+
+  display: flex;
+  align-items: center;
+  background: transparent;
+  outline: none;
+  padding: 1.5rem;
+  width: 25rem;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  border: 1px solid whitesmoke;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.query img {
+  margin-right: 1rem;
+  object-fit: cover;
+  height: 1.7rem;
+}
+
+.query:hover{
+  background-image: linear-gradient(to bottom right ,white, rgb(28,30,58,1));
+}
+
+.lowerSide {
+  height: calc(100vh - 35vh);
+  overflow-y: auto;
+  padding: 2rem;
+
+}
+
+.listitems {
+  margin: 0.7rem;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.listitemsImg {
+  margin: 1rem;
+  padding-right: 1rem;
+}
+
+.chatFooter {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.inp {
+  padding: 0.5rem;
+  background: rgb(28,30,58,1);
+  display: flex;
+  align-items: center;
+  width: 70rem;
+  border-radius: 5rem;
+
+}
+
+.inp>input {
+  width: calc(100% - 3rem);
+  outline: none;
+  padding: 1.25rem;
+  color: white;
+}
+
+.inp > input , .send {
+  background: transparent;
+  border: none;
+}
+
+.chats {
+  overflow: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100rem;
+  height: calc(100vh - 17rem);
+
+}
+
+.chat {
+  margin: 1rem;
+  padding: 2rem 3rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  text-align: justify;
+}
+
+.chatimg {
+  object-fit: cover;
+  width: 3.5rem;
+  margin-right: 2rem;
+  border-radius: 0.5rem;
+
+}
+
+.bot {
+  background: rgb(28, 30,58,1);
+  width:initial;
+  border-radius: 1rem;
+}
+
+.message {
+  display: flex;
+  border: 1px solid white;
+  overflow: hidden;
+}
+
+.bookmark-message {
+  font-size: 1.3rem;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: aqua;
+  border-radius: 3rem;
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(76, 153, 153);
+}
+
+.new-chat {
+  margin: 0rem 5rem;
+}
+
+.new-chat-button {
+    font-size: 1.5rem;
+    text-align: center;
+    border: 1px solid;
+    padding: 1rem;  
+    transition: background-image 2.0 ease-in;
+}
+
+.new-chat-button:hover{
+  background-image: linear-gradient(to bottom right ,white, rgb(28,30,58,1));
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media only screen and (max-width:425px) {
+
+  .sideBar {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    min-width:auto;
+    background-color: black;
+  }
+  .main {
+    margin: 2rem 1rem;
+    min-width:-webkit-fill-available;
+    align-items: flex-start;
+  }
+  .inp {
+    width: -webkit-fill-available;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .cancel-icon {
+    margin-left: 4rem;
+    text-align: end;
+    display: block;
+  }
+
+}
+
+@media only screen and (max-width:768px) {
+    .inp {
+      width: -webkit-fill-available;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+  .main {
+    margin: 6rem 5rem;
+  }
+}
+
